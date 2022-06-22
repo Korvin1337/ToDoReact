@@ -12,3 +12,4 @@ npm install @react-navigation/native-stack
 
 npm install --save @types/react-native
 
+npm install react-native-paper

@@ -17,6 +17,12 @@ const MainTodosScreen = ({ navigation }) => {
         .catch(err => console.log(err))
     })
 
+    const updateListener = emitter.addListener('update', (todoName) => {
+      findAll()
+        .then(res => setTodos(res))
+        .catch(err => console.log(err))
+    })
+
     useEffect(() => {
       findAll()
         .then(res => setTodos(res))
