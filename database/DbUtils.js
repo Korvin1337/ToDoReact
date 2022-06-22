@@ -107,22 +107,3 @@ export const updateById = (id, updated_title, updated_isCompleted) => {
     })
 
 }
-
-/*export const updateById = (id, updated_title, updated_isCompleted) => {
-
-    return new Promise((resolve, reject) => {
-
-        db.transaction((transaction) => {
-            transaction.executeSql(
-                `UPDATE todos
-                SET title = ${updated_title},
-                    completed = ${updated_isCompleted}
-                WHERE 
-                    id = ${id}`,
-                (tx, res) => resolve(res),
-                (tx, err) => reject(err)
-            )
-        })
-    })
-
-}*/
